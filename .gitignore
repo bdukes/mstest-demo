@@ -1,2 +1,4 @@
 bin/
 obj/
+dotnet-test-results/
+dotnet-vstest-results/

@@ -1,0 +1,11 @@
+<Project Sdk="MSTest.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>Project.One.Tests</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ProjectOne\ProjectOne.csproj" />
+    </ItemGroup>
+
+</Project>

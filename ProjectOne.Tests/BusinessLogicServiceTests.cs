@@ -7,6 +7,6 @@ public class BusinessLogicServiceTests
     public void GetBusinessLogicCount_WhenNullInput_Throws()
     {
         var service = TestHelpers.CreateBusinessLogicService();
-        Assert.ThrowsException<NullReferenceException>(() => service.GetBusinessLogicCount(null!));
+        Assert.ThrowsException<ArgumentNullException>(() => service.GetBusinessLogicCount(null!));
     }
 }

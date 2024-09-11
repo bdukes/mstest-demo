@@ -2,14 +2,14 @@
 
 ## Build error when one test project references another
 
-Starting with MSTest 3.6.0, when one test project references another test project, warning CS0436 is emitted by the
+([Issue #3813](https://github.com/microsoft/testfx/issues/3813)) Starting with MSTest 3.6.0, when one test project references another test project, warning CS0436 is emitted by the
 compiler because the same type is being compiled into two assemblies.
 
 ### Steps to reproduce
 
-- Checkout `build-error-on-reference` branch
-- Run `dotnet clean` to ensure a clean environment
-- Run `dotnet build`
+1. Checkout `build-error-on-reference` branch
+2. Run `dotnet clean` to ensure a clean environment
+3. Run `dotnet build`
 
 ### Expected Results
 
@@ -29,14 +29,14 @@ he imported type 'SelfRegisteredExtensions' in 'ProjectOne.Tests, Version=1.0.0.
 
 ## No/empty TRX file generated from `dotnet test`
 
-There are no TRX result files generated when using `dotnet test`, though there are with `dotnet vstest`.
+([Issue #3814](https://github.com/microsoft/testfx/issues/3814)) There are no TRX result files generated when using `dotnet test`, though there are with `dotnet vstest`.
 
 ### Steps to reproduce
 
-- Checkout `dotnet-test-trx` branch
-- Run `dotnet clean` to ensure a clean environment
-- Run `dotnet test --logger trx --results-directory dotnet-test-results`
-- Run `dotnet vstest **/*.Tests.dll /Logger:trx /ResultsDirectory:dotnet-vstest-results`
+1. Checkout `dotnet-test-trx` branch
+2. Run `dotnet clean` to ensure a clean environment
+3. Run `dotnet test --logger trx --results-directory dotnet-test-results`
+4. Run `dotnet vstest **/*.Tests.dll /Logger:trx /ResultsDirectory:dotnet-vstest-results`
 
 ### Expected Results
 
